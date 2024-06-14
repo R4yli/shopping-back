@@ -1,12 +1,14 @@
 const { Sequelize } = require("sequelize");
 
-const database = "shopping_list";
+const database = "railway";
 const username = "postgres";
-const password = "1234";
-const host = "localhost";
+const password = process.env.DATABASE_PASSWORD;
+const host = "roundhouse.proxy.rlwy.net";
+const port = "32432";
 
 const sequelize = new Sequelize(database, username, password, {
 	host: host,
+	port: port,
 	dialect: "postgres",
 	logging: true,
 });
