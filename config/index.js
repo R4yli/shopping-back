@@ -9,7 +9,7 @@ const port = "32432";
 const sequelize = new Sequelize(database, username, password, {
 	host: host,
 	port: port,
-	dialect: "postgres",
+	dialect: "postgresql",
 	logging: true,
 });
 
